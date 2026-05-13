@@ -1,0 +1,5 @@
+Wynn,4748
+MGM,6852
+Hilton,3000
+Bellagio,3950
+Mresort,4120
