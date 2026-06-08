@@ -23,3 +23,11 @@ Asymmetric distribution with most data concentrated on the left (low values) and
 
 8. Precision:
 Of all the items the model flagged as positive, what fraction is actually positive. True Positives / (True Positives + False Positives). Key metric on imbalanced data — accuracy can be misleading on low base rates, precision tells the truth.
+
+9. Machine Learning: Is a programming where instead of manually wiriting rules we give labelled data to computer to learn out of it.
+
+10. Feature: Input properties that describes an training record. Its the given input for a ML function.
+
+11. Label: Label on training data is the exact outcome based on features. Label from ML model is the predicted outcome based on given features and based on learning from training data.
+
+12. Overfitting: Over fitting is a condition where model predicts the correct ourcome/label for the training data only. Once we used the labeled test data, model does not give correct labels. This indicates that model momorized instead of learning.
