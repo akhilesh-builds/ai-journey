@@ -24,10 +24,49 @@ Asymmetric distribution with most data concentrated on the left (low values) and
 8. Precision:
 Of all the items the model flagged as positive, what fraction is actually positive. True Positives / (True Positives + False Positives). Key metric on imbalanced data — accuracy can be misleading on low base rates, precision tells the truth.
 
-9. Machine Learning: Is a programming where instead of manually wiriting rules we give labelled data to computer to learn out of it.
+9. Machine Learning: 
+Is a programming where instead of manually wiriting rules we give labelled data to computer to learn out of it.
 
-10. Feature: Input properties that describes an training record. Its the given input for a ML function.
+10. Feature: 
+Input properties that describes an training record. Its the given input for a ML function.
 
-11. Label: Label on training data is the exact outcome based on features. Label from ML model is the predicted outcome based on given features and based on learning from training data.
+11. Label: 
+Label on training data is the exact outcome based on features. Label from ML model is the predicted outcome based on given features and based on learning from training data.
 
-12. Overfitting: Over fitting is a condition where model predicts the correct ourcome/label for the training data only. Once we used the labeled test data, model does not give correct labels. This indicates that model momorized instead of learning.
+12. Overfitting: 
+Over fitting is a condition where model predicts the correct ourcome/label for the training data only. Once we used the labeled test data, model does not give correct labels. This indicates that model momorized instead of learning.
+
+13. Held-out (test set): 
+Data deliberately kept away from the model during training, used only for final evaluation. Prevents the model from being graded on data it already saw, which would mask overfitting.
+
+14. Random_state (reproducibility seed):
+A fixed seed for the random number generator. Setting it makes operations like train/test split produce the same result every run, so you can isolate the effect of model changes from the effect of lucky/unlucky data splits.
+
+15. Parameters: 
+Values learned during training that define the model. For linear regression with n features: n coefficients (one per feature) plus 1 intercept = n+1 parameters. Neural networks scale this to billions of parameters across multiple stacked equations.
+Parameter = what the model learns. Feature = what you feed in.
+
+16. Loss function:
+The function a model tries to minimize during training. It measures how wrong the model's predictions are. For linear regression: mean squared error — the average squared difference between predicted and actual values. 
+
+17. Linear Regression: 
+Simplest supervised learning algorithm. It finds the best fit line to given features and predicts the outcome in the form of a number. 
+Linear regression can only add and subtract scaled features. When the real relationship involves multiplication or curves, the model approximates by using each feature's typical value as a stand-in scaling factor — close, but never exact.
+
+18. r-Squared : 
+THis value measures how much of a variance my model could explain give the features provided to my model. Like I gave two features of nightly rates and no of night for a model whcih is predicting total revenue. Revenue varies from 80-800. THen r square will tell us how much of 8-800 variation is explained by two features. If its 1 that means all the variation can be explained by model if its 0 mean none of the variation can be explained. 
+"Of all that variation in revenue across bookings — how much of it can my model explain using features like Nights and Rate?"
+
+
+18. Variance: 
+how spread out the data is around its mean. 
+
+19. Feature scaling/Standardization: 
+Transforming each feature to have mean 0 and standard deviation 1 (subtract mean, divide by std). For linear regression: doesn't change RMSE or R², but makes coefficients directly comparable — you can now ask 'which feature matters most'. Critical for non-linear algorithms where it actually changes predictions."
+
+
+20. Data leakage:
+Any situation where the model is exposed during training to information it shouldn't have access to at prediction time. Example: fitting the scaler on test data lets the model 'see' test statistics during training. Other examples: using future data to predict past events, including the label as a feature accidentally, leaky cross-validation. The bug pattern: training data and held-out data must stay strictly separated
+
+
+
